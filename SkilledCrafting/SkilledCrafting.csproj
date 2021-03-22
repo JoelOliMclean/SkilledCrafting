@@ -32,47 +32,47 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\References\0Harmony.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_googleanalytics">
-      <HintPath>..\..\..\References\assembly_googleanalytics.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_googleanalytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_guiutils">
-      <HintPath>..\..\..\References\assembly_guiutils.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_guiutils.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_lux">
-      <HintPath>..\..\..\References\assembly_lux.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_lux.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_postprocessing">
-      <HintPath>..\..\..\References\assembly_postprocessing.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_postprocessing.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_simplemeshcombine">
-      <HintPath>..\..\..\References\assembly_simplemeshcombine.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_simplemeshcombine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_steamworks">
-      <HintPath>..\..\..\References\assembly_steamworks.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_steamworks.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_sunshafts">
-      <HintPath>..\..\..\References\assembly_sunshafts.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_sunshafts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_utils">
-      <HintPath>..\..\..\References\assembly_utils.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_utils.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="assembly_valheim">
-      <HintPath>..\..\..\References\assembly_valheim.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\assembly_valheim.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\..\..\References\BepInEx.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\BepInEx.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -84,247 +84,247 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\References\UnityEngine.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>..\..\..\References\UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.AccessibilityModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
-      <HintPath>..\..\..\References\UnityEngine.AIModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.AIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>..\..\..\References\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.AndroidJNIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>..\..\..\References\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.AnimationModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
-      <HintPath>..\..\..\References\UnityEngine.ARModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ARModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\..\..\References\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\..\..\References\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.AudioModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
-      <HintPath>..\..\..\References\UnityEngine.ClothModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ClothModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>..\..\..\References\UnityEngine.ClusterInputModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ClusterInputModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>..\..\..\References\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ClusterRendererModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\References\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>..\..\..\References\UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.CrashReportingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>..\..\..\References\UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.DirectorModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>..\..\..\References\UnityEngine.DSPGraphModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.DSPGraphModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>..\..\..\References\UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.GameCenterModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
-      <HintPath>..\..\..\References\UnityEngine.GridModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.GridModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>..\..\..\References\UnityEngine.HotReloadModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.HotReloadModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\..\..\References\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ImageConversionModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\References\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\..\..\References\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>..\..\..\References\UnityEngine.InputModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.InputModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>..\..\..\References\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>..\..\..\References\UnityEngine.LocalizationModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.LocalizationModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>..\..\..\References\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ParticleSystemModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>..\..\..\References\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.PerformanceReportingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>..\..\..\References\UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.Physics2DModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\..\References\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.PhysicsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>..\..\..\References\UnityEngine.ProfilerModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ProfilerModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>..\..\..\References\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.ScreenCaptureModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>..\..\..\References\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.SharedInternalsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>..\..\..\References\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.SpriteMaskModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>..\..\..\References\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.SpriteShapeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>..\..\..\References\UnityEngine.StreamingModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.StreamingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>..\..\..\References\UnityEngine.SubstanceModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.SubstanceModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>..\..\..\References\UnityEngine.SubsystemsModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.SubsystemsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>..\..\..\References\UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.TerrainModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>..\..\..\References\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.TerrainPhysicsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>..\..\..\References\UnityEngine.TextCoreModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.TextCoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\..\References\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>..\..\..\References\UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.TilemapModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TLSModule">
-      <HintPath>..\..\..\References\UnityEngine.TLSModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.TLSModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\References\UnityEngine.UI.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>..\..\..\References\UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UIElementsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\..\..\References\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>..\..\..\References\UnityEngine.UmbraModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UmbraModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
-      <HintPath>..\..\..\References\UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UNETModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityAnalyticsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityTestProtocolModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityWebRequestModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>..\..\..\References\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>..\..\..\References\UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.VehiclesModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
-      <HintPath>..\..\..\References\UnityEngine.VFXModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.VFXModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>..\..\..\References\UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.VideoModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>..\..\..\References\UnityEngine.VRModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.VRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
-      <HintPath>..\..\..\References\UnityEngine.WindModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.WindModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
-      <HintPath>..\..\..\References\UnityEngine.XRModule.dll</HintPath>
+      <HintPath>C:\Users\Joel\Google Drive\Modding\Valheim\References\UnityEngine.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

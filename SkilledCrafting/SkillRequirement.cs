@@ -7,12 +7,23 @@ namespace SkilledCrafting
         internal static Dictionary<string, SkillRequirement> skillRequirements = new Dictionary<string, SkillRequirement>();
 
         internal Skills.SkillType m_skill;
+        internal Skills.SkillType m_additionalSkill;
         internal int m_requiredLevel;
+        internal bool hasAdditionalSkillRequirement;
 
         internal SkillRequirement(Skills.SkillType skill, int requiredLevel)
         {
             m_skill = skill;
             m_requiredLevel = requiredLevel;
+            hasAdditionalSkillRequirement = false;
+        }
+
+        internal SkillRequirement(Skills.SkillType skill, Skills.SkillType additionSkill, int requiredLevel)
+        {
+            m_skill = skill;
+            m_additionalSkill = additionSkill;
+            m_requiredLevel = requiredLevel;
+            hasAdditionalSkillRequirement = true;
         }
 
         internal static void InitAll()
@@ -31,7 +42,6 @@ namespace SkilledCrafting
             skillRequirements.Add("Recipe_ArmorLeatherChest", new SkillRequirement(Skills.SkillType.Blocking, SkilledCraftingConfig.leatherLevel.Value));
             skillRequirements.Add("Recipe_ArmorLeatherLegs", new SkillRequirement(Skills.SkillType.Blocking, SkilledCraftingConfig.leatherLevel.Value));
             skillRequirements.Add("Recipe_ArmorPaddedCuirass", new SkillRequirement(Skills.SkillType.Blocking, SkilledCraftingConfig.ironLevel.Value));
-            skillRequirements.Add("Recipe_ArmorPaddedGreaves", new SkillRequirement(Skills.SkillType.Blocking, SkilledCraftingConfig.ironLevel.Value));
             skillRequirements.Add("Recipe_ArmorPaddedGreaves", new SkillRequirement(Skills.SkillType.Blocking, SkilledCraftingConfig.ironLevel.Value));
             skillRequirements.Add("Recipe_ArmorTrollLeatherChest", new SkillRequirement(Skills.SkillType.Blocking, SkilledCraftingConfig.leatherLevel.Value));
             skillRequirements.Add("Recipe_ArmorTrollLeatherLegs", new SkillRequirement(Skills.SkillType.Blocking, SkilledCraftingConfig.leatherLevel.Value));
@@ -57,10 +67,29 @@ namespace SkilledCrafting
             skillRequirements.Add("Recipe_AtgeirBronze", new SkillRequirement(Skills.SkillType.Polearms, SkilledCraftingConfig.bronzeLevel.Value));
             skillRequirements.Add("Recipe_AtgeirIron", new SkillRequirement(Skills.SkillType.Polearms, SkilledCraftingConfig.ironLevel.Value));
 
-            skillRequirements.Add("Recipe_AxeBlackMetal", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.blackMetalLevel.Value));
-            skillRequirements.Add("Recipe_AxeIron", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.ironLevel.Value));
-            skillRequirements.Add("Recipe_AxeBronze", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.bronzeLevel.Value));
-            skillRequirements.Add("Recipe_Battleaxe", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.ironLevel.Value));
+            switch(SkilledCraftingConfig.axeSkillType.Value)
+            {
+                case SkilledCraftingConfig.AxeSkillType.Both:
+                    skillRequirements.Add("Recipe_AxeBlackMetal", new SkillRequirement(Skills.SkillType.Axes, Skills.SkillType.WoodCutting, SkilledCraftingConfig.blackMetalLevel.Value));
+                    skillRequirements.Add("Recipe_AxeIron", new SkillRequirement(Skills.SkillType.Axes, Skills.SkillType.WoodCutting, SkilledCraftingConfig.ironLevel.Value));
+                    skillRequirements.Add("Recipe_AxeBronze", new SkillRequirement(Skills.SkillType.Axes, Skills.SkillType.WoodCutting, SkilledCraftingConfig.bronzeLevel.Value));
+                    skillRequirements.Add("Recipe_Battleaxe", new SkillRequirement(Skills.SkillType.Axes, Skills.SkillType.WoodCutting, SkilledCraftingConfig.ironLevel.Value));
+                    break;
+                case SkilledCraftingConfig.AxeSkillType.Axes:
+                    skillRequirements.Add("Recipe_AxeBlackMetal", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.blackMetalLevel.Value));
+                    skillRequirements.Add("Recipe_AxeIron", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.ironLevel.Value));
+                    skillRequirements.Add("Recipe_AxeBronze", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.bronzeLevel.Value));
+                    skillRequirements.Add("Recipe_Battleaxe", new SkillRequirement(Skills.SkillType.Axes, SkilledCraftingConfig.ironLevel.Value));
+                    break;
+                case SkilledCraftingConfig.AxeSkillType.WoodCutting:
+                default:
+                    skillRequirements.Add("Recipe_AxeBlackMetal", new SkillRequirement(Skills.SkillType.WoodCutting, SkilledCraftingConfig.blackMetalLevel.Value));
+                    skillRequirements.Add("Recipe_AxeIron", new SkillRequirement(Skills.SkillType.WoodCutting, SkilledCraftingConfig.ironLevel.Value));
+                    skillRequirements.Add("Recipe_AxeBronze", new SkillRequirement(Skills.SkillType.WoodCutting, SkilledCraftingConfig.bronzeLevel.Value));
+                    skillRequirements.Add("Recipe_Battleaxe", new SkillRequirement(Skills.SkillType.WoodCutting, SkilledCraftingConfig.ironLevel.Value));
+                    break;
+
+            }
 
             skillRequirements.Add("Recipe_KnifeBlackmetal", new SkillRequirement(Skills.SkillType.Knives, SkilledCraftingConfig.blackMetalLevel.Value));
 
