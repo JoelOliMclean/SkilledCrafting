@@ -19,13 +19,7 @@ namespace SkilledCrafting
                 if (m_skillData.ContainsKey(skillRecipe.m_skill))
                 {
                     Skills.Skill requiredSkill = m_skillData[skillRecipe.m_skill];
-                    bool meetsAdditionalSkillRequirement = true;
-                    if (skillRecipe.hasAdditionalSkillRequirement)
-                    {
-                        Skills.Skill additionalRequiredSkill = m_skillData[skillRecipe.m_additionalSkill];
-                        meetsAdditionalSkillRequirement = additionalRequiredSkill.m_level >= skillRecipe.m_requiredLevel;
-                    }
-                    canCraft = requiredSkill.m_level >= skillRecipe.m_requiredLevel && meetsAdditionalSkillRequirement;
+                    canCraft = requiredSkill.m_level >= skillRecipe.m_requiredLevel;
                 }
             }
             return true;
@@ -44,25 +38,14 @@ namespace SkilledCrafting
                 if (m_skillData.ContainsKey(skillRecipe.m_skill))
                 {
                     Skills.Skill requiredSkill = m_skillData[skillRecipe.m_skill];
-                    bool meetsAdditionalSkillRequirement = true;
-                    if (skillRecipe.hasAdditionalSkillRequirement)
-                    {
-                        Skills.Skill additionalRequiredSkill = m_skillData[skillRecipe.m_additionalSkill];
-                        meetsAdditionalSkillRequirement = additionalRequiredSkill.m_level >= skillRecipe.m_requiredLevel;
-                    }
                     string skill = skillRecipe.m_skill == Skills.SkillType.WoodCutting ? "Wood cutting" : skillRecipe.m_skill.ToString();
-                    string additionalSkill = skillRecipe.m_additionalSkill == Skills.SkillType.WoodCutting ? "Wood cutting" : skillRecipe.m_additionalSkill.ToString();
                     string message = $"Requires Lvl {skillRecipe.m_requiredLevel} in {skill}";
-                    if (skillRecipe.hasAdditionalSkillRequirement)
-                    {
-                        message += $" and {additionalSkill}";
-                    }
                     message = Localization.instance.Localize(message);
                     __instance.m_recipeDecription.text += Localization.instance.Localize($"\n\n{message}\n");
                     if (__instance.m_craftButton.interactable)
                     {
                         __instance.m_craftButton.GetComponent<UITooltip>().m_text = message;
-                        __instance.m_craftButton.interactable = requiredSkill.m_level >= skillRecipe.m_requiredLevel && meetsAdditionalSkillRequirement;
+                        __instance.m_craftButton.interactable = requiredSkill.m_level >= skillRecipe.m_requiredLevel;
                     }
                 }
             }

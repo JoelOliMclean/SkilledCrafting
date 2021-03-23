@@ -8,7 +8,7 @@ namespace SkilledCrafting
     {
         internal const string GUID = "uk.co.jowelth.valheim.skilledcrafting";
         internal const string MOD_NAME = "SkilledCrafting";
-        internal const string VERSION = "1.2.0";
+        internal const string VERSION = "1.3.0";
 
         public void Awake()
         {
