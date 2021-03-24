@@ -6,6 +6,8 @@ namespace SkilledCrafting
     {
         internal static ConfigEntry<bool> modEnabled;
 
+        internal static ConfigEntry<bool> overrideRecipeDiscovery;
+
         internal static ConfigEntry<int> leatherLevel;
         internal static ConfigEntry<int> bronzeLevel;
         internal static ConfigEntry<int> ironLevel;
@@ -27,6 +29,9 @@ namespace SkilledCrafting
         internal static void Init(ConfigFile config)
         {
             modEnabled = config.Bind("General", "Mod Enabled", true, "Sets whether this mod is enabled");
+
+            overrideRecipeDiscovery = config.Bind("General", "Use Skilled Crafting Recipe Discovery", true, 
+                "If true, recipes for items locked behind skill requirements are not discovered until you have both discovered the materials and also reached the required level in the relevant skill.");
 
             leatherLevel = config.Bind("Skill Levels", "Leather Requirement", 5, "Minimum level required for crafting leather!");
             bronzeLevel = config.Bind("Skill Levels", "Bronze Requirement", 10, "Minimum level required for crafting bronze!");

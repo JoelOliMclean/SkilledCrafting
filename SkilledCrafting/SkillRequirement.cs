@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using HarmonyLib;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SkilledCrafting
 {
@@ -80,6 +83,42 @@ namespace SkilledCrafting
             skillRequirements.Add("Recipe_SwordBronze", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.bronzeLevel.Value));
             skillRequirements.Add("Recipe_SwordIron", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.ironLevel.Value));
             skillRequirements.Add("Recipe_SwordSilver", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.silverLevel.Value));
+        }
+
+        internal static bool GoodEnough(Player player, Recipe recipe)
+        {
+            if (!skillRequirements.ContainsKey(recipe.name)) 
+                return true;
+            SkillRequirement skillRecipe = skillRequirements[recipe.name];
+            Skills skills = player.GetSkills();
+            Dictionary<Skills.SkillType, Skills.Skill> m_skillData = AccessTools.Field(typeof(Skills), "m_skillData").GetValue(skills) as Dictionary<Skills.SkillType, Skills.Skill>;
+            if (m_skillData.ContainsKey(skillRecipe.m_skill))
+            {
+                Skills.Skill requiredSkill = m_skillData[skillRecipe.m_skill];
+                return requiredSkill.m_level >= skillRecipe.m_requiredLevel;
+            }
+            return false;
+        }
+
+        internal static string GetSkillName(Skills.SkillType skill)
+        {
+            switch (skill)
+            {
+                case Skills.SkillType.WoodCutting:
+                    return "Wood cutting";
+                case Skills.SkillType.FireMagic:
+                    return "Fire magic";
+                case Skills.SkillType.FrostMagic:
+                    return "Frost magic";
+                default:
+                    return skill.ToString();
+            }
+        }
+
+        internal static List<Recipe> GetRecipesToLearnForSkillAndLevel(Skills.SkillType skill, float level)
+        {
+            List<string> unlockedRecipeNames = skillRequirements.Where(x => x.Value.m_skill.Equals(skill)).Where(x => x.Value.m_requiredLevel <= level).Select(x => x.Key).ToList();
+            return ObjectDB.instance.m_recipes.Where(x => unlockedRecipeNames.Contains(x.name)).ToList();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace SkilledCrafting
     {
         internal const string GUID = "uk.co.jowelth.valheim.skilledcrafting";
         internal const string MOD_NAME = "SkilledCrafting";
-        internal const string VERSION = "1.3.0";
+        internal const string VERSION = "1.4.0";
 
         public void Awake()
         {
@@ -17,6 +17,10 @@ namespace SkilledCrafting
             {
                 SkillRequirement.InitAll();
                 Harmony.CreateAndPatchAll(typeof(PatchInventoryGui), null);
+                if (SkilledCraftingConfig.overrideRecipeDiscovery.Value)
+                {
+                    Harmony.CreateAndPatchAll(typeof(PatchPlayer), null);
+                }
             }
         }
 

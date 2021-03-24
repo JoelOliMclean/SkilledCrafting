@@ -9,18 +9,11 @@ namespace SkilledCrafting
     {
         [HarmonyPatch("AddRecipeToList")]
         [HarmonyPrefix]
-        internal static bool AddRecipeToList_Pre(ref InventoryGui __instance, Player player, Recipe recipe, ItemDrop.ItemData item, ref bool canCraft)
+        internal static bool AddRecipeToList_Pre(Player player, Recipe recipe, ItemDrop.ItemData item, ref bool canCraft)
         {
             if (!player.NoCostCheat() && SkillRequirement.skillRequirements.ContainsKey(recipe.name))
             {
-                SkillRequirement skillRecipe = SkillRequirement.skillRequirements[recipe.name];
-                Skills skills = player.GetSkills();
-                Dictionary<Skills.SkillType, Skills.Skill> m_skillData = AccessTools.Field(typeof(Skills), "m_skillData").GetValue(skills) as Dictionary<Skills.SkillType, Skills.Skill>;
-                if (m_skillData.ContainsKey(skillRecipe.m_skill))
-                {
-                    Skills.Skill requiredSkill = m_skillData[skillRecipe.m_skill];
-                    canCraft = requiredSkill.m_level >= skillRecipe.m_requiredLevel;
-                }
+                canCraft = SkillRequirement.GoodEnough(player, recipe);
             }
             return true;
         }
@@ -29,23 +22,19 @@ namespace SkilledCrafting
         [HarmonyPostfix]
         internal static void UpdateRecipe_Post(ref InventoryGui __instance, Player player)
         {
-            KeyValuePair<Recipe, ItemDrop.ItemData> selectedRecipe = (KeyValuePair<Recipe, ItemDrop.ItemData>)AccessTools.Field(typeof(InventoryGui), "m_selectedRecipe").GetValue(__instance);
-            if ((bool)(UnityEngine.Object)selectedRecipe.Key && SkillRequirement.skillRequirements.ContainsKey(selectedRecipe.Key.name))
+            Recipe selectedRecipe = ((KeyValuePair<Recipe, ItemDrop.ItemData>)AccessTools.Field(typeof(InventoryGui), "m_selectedRecipe").GetValue(__instance)).Key;
+            if (selectedRecipe && SkillRequirement.skillRequirements.ContainsKey(selectedRecipe.name))
             {
-                SkillRequirement skillRecipe = SkillRequirement.skillRequirements[selectedRecipe.Key.name];
-                Skills skills = player.GetSkills();
-                Dictionary<Skills.SkillType, Skills.Skill> m_skillData = AccessTools.Field(typeof(Skills), "m_skillData").GetValue(skills) as Dictionary<Skills.SkillType, Skills.Skill>;
+                SkillRequirement skillRecipe = SkillRequirement.skillRequirements[selectedRecipe.name];
+                Dictionary<Skills.SkillType, Skills.Skill> m_skillData = AccessTools.Field(typeof(Skills), "m_skillData").GetValue(player.GetSkills()) as Dictionary<Skills.SkillType, Skills.Skill>;
                 if (m_skillData.ContainsKey(skillRecipe.m_skill))
                 {
-                    Skills.Skill requiredSkill = m_skillData[skillRecipe.m_skill];
-                    string skill = skillRecipe.m_skill == Skills.SkillType.WoodCutting ? "Wood cutting" : skillRecipe.m_skill.ToString();
-                    string message = $"Requires Lvl {skillRecipe.m_requiredLevel} in {skill}";
-                    message = Localization.instance.Localize(message);
+                    string message = $"Requires Lvl {skillRecipe.m_requiredLevel} in {SkillRequirement.GetSkillName(skillRecipe.m_skill)}";
                     __instance.m_recipeDecription.text += Localization.instance.Localize($"\n\n{message}\n");
-                    if (__instance.m_craftButton.interactable)
+                    if (__instance.m_craftButton.interactable && !SkillRequirement.GoodEnough(player, selectedRecipe))
                     {
                         __instance.m_craftButton.GetComponent<UITooltip>().m_text = message;
-                        __instance.m_craftButton.interactable = requiredSkill.m_level >= skillRecipe.m_requiredLevel;
+                        __instance.m_craftButton.interactable = false;
                     }
                 }
             }
