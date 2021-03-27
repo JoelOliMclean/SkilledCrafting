@@ -55,9 +55,16 @@ namespace SkilledCrafting
             skillRequirements.Add("Recipe_BowDraugrFang", new SkillRequirement(SkilledCraftingConfig.bowSkill.Value, SkilledCraftingConfig.silverLevel.Value));
             skillRequirements.Add("Recipe_BowHuntsman", new SkillRequirement(SkilledCraftingConfig.bowSkill.Value, SkilledCraftingConfig.ironLevel.Value));
 
-            skillRequirements.Add("Recipe_AtgeirBlackmetal", new SkillRequirement(SkilledCraftingConfig.atgeirSkill.Value, SkilledCraftingConfig.blackMetalLevel.Value));
-            skillRequirements.Add("Recipe_AtgeirBronze", new SkillRequirement(SkilledCraftingConfig.atgeirSkill.Value, SkilledCraftingConfig.bronzeLevel.Value));
+            if (SkilledCraftingConfig.overrideBronzeAtgeirSkill.Value)
+            {
+                skillRequirements.Add("Recipe_AtgeirBronze", new SkillRequirement(SkilledCraftingConfig.atgeirSkill.Value, SkilledCraftingConfig.bronzeLevel.Value));
+            } 
+            else
+            {
+                skillRequirements.Add("Recipe_AtgeirBronze", new SkillRequirement(Skills.SkillType.Spears, SkilledCraftingConfig.bronzeLevel.Value));
+            }
             skillRequirements.Add("Recipe_AtgeirIron", new SkillRequirement(SkilledCraftingConfig.atgeirSkill.Value, SkilledCraftingConfig.ironLevel.Value));
+            skillRequirements.Add("Recipe_AtgeirBlackmetal", new SkillRequirement(SkilledCraftingConfig.atgeirSkill.Value, SkilledCraftingConfig.blackMetalLevel.Value));
 
             skillRequirements.Add("Recipe_AxeBlackMetal", new SkillRequirement(SkilledCraftingConfig.axeSkill.Value, SkilledCraftingConfig.blackMetalLevel.Value));
             skillRequirements.Add("Recipe_AxeIron", new SkillRequirement(SkilledCraftingConfig.axeSkill.Value, SkilledCraftingConfig.ironLevel.Value));
@@ -79,10 +86,17 @@ namespace SkilledCrafting
             skillRequirements.Add("Recipe_SpearElderbark", new SkillRequirement(SkilledCraftingConfig.spearSkill.Value, SkilledCraftingConfig.ironLevel.Value));
             skillRequirements.Add("Recipe_SpearWolfFang", new SkillRequirement(SkilledCraftingConfig.spearSkill.Value, SkilledCraftingConfig.silverLevel.Value));
 
-            skillRequirements.Add("Recipe_SwordBlackmetal", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.blackMetalLevel.Value));
-            skillRequirements.Add("Recipe_SwordBronze", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.bronzeLevel.Value));
+            if (SkilledCraftingConfig.overrideBronzeAtgeirSkill.Value)
+            {
+                skillRequirements.Add("Recipe_SwordBronze", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.bronzeLevel.Value));
+            }
+            else
+            {
+                skillRequirements.Add("Recipe_SwordBronze", new SkillRequirement(Skills.SkillType.Clubs, SkilledCraftingConfig.bronzeLevel.Value));
+            }
             skillRequirements.Add("Recipe_SwordIron", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.ironLevel.Value));
             skillRequirements.Add("Recipe_SwordSilver", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.silverLevel.Value));
+            skillRequirements.Add("Recipe_SwordBlackmetal", new SkillRequirement(SkilledCraftingConfig.swordSkill.Value, SkilledCraftingConfig.blackMetalLevel.Value));
         }
 
         internal static bool GoodEnough(Player player, Recipe recipe)

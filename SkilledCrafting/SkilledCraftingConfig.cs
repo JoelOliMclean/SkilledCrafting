@@ -26,6 +26,9 @@ namespace SkilledCrafting
         internal static ConfigEntry<Skills.SkillType> swordSkill;
         internal static ConfigEntry<Skills.SkillType> knifeSkill;
 
+        internal static ConfigEntry<bool> overrideBronzeSwordSkill;
+        internal static ConfigEntry<bool> overrideBronzeAtgeirSkill;
+
         internal static void Init(ConfigFile config)
         {
             modEnabled = config.Bind("General", "Mod Enabled", true, "Sets whether this mod is enabled");
@@ -51,7 +54,11 @@ namespace SkilledCrafting
             swordSkill = config.Bind("Required Skills", "Swords", Skills.SkillType.Swords, "Skill required to level in order to craft swords");
             knifeSkill = config.Bind("Required Skills", "Knives", Skills.SkillType.Knives, "Skill required to level in order to craft knives");
 
+            overrideBronzeSwordSkill = config.Bind("Advanced", "Override Bronze Sword Skill", false, "If true, the bronze sword will require that you level the set skill for swords instead of clubs (due to lowest level sword being bronze)");
+            overrideBronzeAtgeirSkill = config.Bind("Advanced", "Override Bronze Atgeir Skill", false, "If true, the bronze atgeir will require that you level the set skill for spears instead of polearms (due to lowest level polearm being bronze)");
+
             config.Save();
         }
     }
 }
+
