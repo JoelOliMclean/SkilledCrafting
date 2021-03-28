@@ -8,7 +8,7 @@ namespace SkilledCrafting
     {
         internal const string GUID = "uk.co.jowelth.valheim.skilledcrafting";
         internal const string MOD_NAME = "SkilledCrafting";
-        internal const string VERSION = "1.5.1";
+        internal const string VERSION = "1.6.0";
 
         public void Awake()
         {
@@ -20,7 +20,11 @@ namespace SkilledCrafting
                 Harmony.CreateAndPatchAll(typeof(PatchSkillsDialog), null);
                 if (SkilledCraftingConfig.overrideRecipeDiscovery.Value)
                 {
-                    Harmony.CreateAndPatchAll(typeof(PatchPlayer), null);
+                    Harmony.CreateAndPatchAll(typeof(PatchPlayerRecipeDiscovery), null);
+                }
+                if (SkilledCraftingConfig.restrictItemUsage.Value)
+                {
+                    Harmony.CreateAndPatchAll(typeof(PatchPlayerItemUsageRestriction), null);
                 }
             }
         }

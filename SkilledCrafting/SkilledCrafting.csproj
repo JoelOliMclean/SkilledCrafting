@@ -330,7 +330,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PatchInventoryGui.cs" />
-    <Compile Include="PatchPlayer.cs" />
+    <Compile Include="PatchPlayerItemUsageRestriction.cs" />
+    <Compile Include="PatchPlayerRecipeDiscovery.cs" />
     <Compile Include="PatchSkillsDialog.cs" />
     <Compile Include="SkilledCraftingConfig.cs" />
     <Compile Include="SkilledCrafting.cs" />

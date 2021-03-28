@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
-using System;
 using System.Collections.Generic;
 
 namespace SkilledCrafting
 {
     [HarmonyPatch(typeof(Player))]
-    internal class PatchPlayer
+    internal class PatchPlayerRecipeDiscovery
     {
+
         [HarmonyPatch("OnSkillLevelup")]
         [HarmonyPostfix]
         internal static void OnSkillLevelup_Post(ref Player __instance, Skills.SkillType skill, float level)

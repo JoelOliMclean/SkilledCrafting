@@ -8,6 +8,8 @@ namespace SkilledCrafting
 
         internal static ConfigEntry<bool> overrideRecipeDiscovery;
 
+        internal static ConfigEntry<bool> restrictItemUsage;
+
         internal static ConfigEntry<int> leatherLevel;
         internal static ConfigEntry<int> bronzeLevel;
         internal static ConfigEntry<int> ironLevel;
@@ -35,6 +37,8 @@ namespace SkilledCrafting
 
             overrideRecipeDiscovery = config.Bind("General", "Use Skilled Crafting Recipe Discovery", true, 
                 "If true, recipes for items locked behind skill requirements are not discovered until you have both discovered the materials and also reached the required level in the relevant skill.");
+
+            restrictItemUsage = config.Bind("General", "Restrict item usage", true, "When true, also stops player using items that have skill requirements that they can't craft.");
 
             leatherLevel = config.Bind("Skill Levels", "Leather Requirement", 5, "Minimum level required for crafting leather!");
             bronzeLevel = config.Bind("Skill Levels", "Bronze Requirement", 10, "Minimum level required for crafting bronze!");
